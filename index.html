@@ -9,7 +9,69 @@
 @media(max-width:1000px){.layout{grid-template-columns:190px minmax(0,1fr)}.main{padding:18px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-actions{grid-template-columns:repeat(3,minmax(0,1fr))}.panels{grid-template-columns:1fr}.donut{width:125px;height:125px}.donut:before{width:80px;height:80px}}
 @media(max-width:650px){.topbar{height:auto;min-height:64px;padding:11px 13px}.crest{width:36px;height:36px;font-size:18px}.brand{gap:8px}.brand h1{font-size:12px;max-width:220px}.brand p{font-size:10px}.user div:not(.avatar){display:none}.layout{display:block;min-height:calc(100vh - 64px)}aside{display:none}.main{padding:15px 12px 78px}.pagehead{display:block;margin-bottom:15px}.pagehead h2{font-size:22px}.date{display:inline-block;margin-top:10px}.stats{gap:9px}.stat{padding:12px;gap:9px}.stat-icon{width:34px;height:34px;font-size:16px}.stat-value{font-size:22px}.stat-label{font-size:11px}.stat-note{font-size:10px}.quick-actions{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.action{padding:12px 5px;font-size:11px}.action span{font-size:20px}.panel-head,.panel-body{padding:13px}.chartrow{gap:13px}.donut{width:108px;height:108px}.donut:before{width:70px;height:70px}.donut-center strong{font-size:18px}.legend{font-size:10px}.form-grid{grid-template-columns:1fr}.form-section,.form-actions{grid-column:1}.toolbar{padding:12px}.toolbar input,.toolbar select{width:100%}.searchbox{min-width:0}.section-pad{padding:13px}.mobile-bottom{display:flex;position:fixed;bottom:0;left:0;right:0;background:#062e5b;color:white;justify-content:space-around;padding:7px 3px calc(7px + env(safe-area-inset-bottom));z-index:10;box-shadow:0 -4px 15px #001c3830}.mobile-bottom button{background:none;border:0;color:#d4e3f6;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:3px;min-width:50px}.mobile-bottom button span{font-size:18px}.mobile-bottom button.active{color:#fff}.licence-data{grid-template-columns:1fr}.licence-paper{padding:15px}.licence-title h2{font-size:15px}.demo-banner{font-size:10px;padding:9px}.demo-banner b{font-size:9px}.footer{padding-bottom:14px}}
 @media print{body{background:white}.topbar,.layout, .demo-banner,.footer,.modal-head,.no-print{display:none!important}.modalback{position:static;background:white;padding:0;display:block}.modal{max-width:none;max-height:none;box-shadow:none}.modal-body{padding:0}.licence-paper{border:1px solid #aaa;max-width:none}.licence-paper:after{color:#dba72d35}}
-</style></head>
+</style>
+<style id="koroma-premium-dashboard-2026">
+:root{
+  --klt-accent:#1262bd;
+  --klt-glow:rgba(18,98,189,.14);
+  --klt-ease:cubic-bezier(.2,.75,.25,1);
+}
+html{scroll-behavior:smooth}
+.card,.panel,.stat,.stat-card,.kpi,.content-panel,.hero,.pagehead,.page-head,.login-card{
+  border-radius:18px!important;
+  transition:transform .24s var(--klt-ease),box-shadow .24s var(--klt-ease),border-color .24s var(--klt-ease);
+  box-shadow:0 12px 34px rgba(15,35,60,.075),inset 0 1px 0 rgba(255,255,255,.42);
+}
+.stat,.stat-card,.kpi{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  animation:kltDashboardRise .55s var(--klt-ease) both;
+}
+.stat::after,.stat-card::after,.kpi::after{
+  content:"";
+  position:absolute;
+  width:155px;height:155px;
+  right:-62px;bottom:-88px;
+  border-radius:50%;
+  background:radial-gradient(circle,var(--klt-glow),transparent 70%);
+  pointer-events:none;
+  z-index:-1;
+}
+.card:hover,.panel:hover,.stat:hover,.stat-card:hover,.kpi:hover,.content-panel:hover{
+  transform:translateY(-2px);
+  box-shadow:0 18px 42px rgba(15,35,60,.11),inset 0 1px 0 rgba(255,255,255,.5);
+}
+button,.btn,.navbtn,.tab,nav a,nav button{
+  transition:transform .18s var(--klt-ease),filter .18s ease,box-shadow .18s ease,background-color .18s ease;
+}
+button:hover:not(:disabled),.btn:hover:not(:disabled){
+  filter:brightness(1.045);
+}
+button:active:not(:disabled),.btn:active:not(:disabled){
+  transform:translateY(1px) scale(.99);
+}
+input,select,textarea{
+  border-radius:11px;
+  transition:border-color .18s ease,box-shadow .18s ease;
+}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
+  outline:3px solid var(--klt-glow);
+  outline-offset:2px;
+}
+table tbody tr{transition:background-color .16s ease}
+table tbody tr:hover{background:var(--klt-glow)}
+@keyframes kltDashboardRise{
+  from{opacity:0;transform:translateY(9px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+
+</head>
 <body>
 <div class="demo-banner">⚠ <span>This system contains <strong>DEMONSTRATION DATA</strong> for testing and presentation only. It is not an official Ministry register.</span><b>DEMO DATA</b></div>
 <header class="topbar"><div class="brand"><div class="crest">⚓</div><div><h1>Ministry of Fisheries and Marine Resources</h1><p>Fishing Licence Management System · Sierra Leone</p></div></div><div class="user"><div class="avatar">♙</div><div><strong>Admin Officer</strong><br><span style="color:#c8d9ed">Demonstration account</span></div><span>⌄</span></div></header>
