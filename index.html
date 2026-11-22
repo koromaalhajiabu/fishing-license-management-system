@@ -11,66 +11,34 @@
 @media print{body{background:white}.topbar,.layout, .demo-banner,.footer,.modal-head,.no-print{display:none!important}.modalback{position:static;background:white;padding:0;display:block}.modal{max-width:none;max-height:none;box-shadow:none}.modal-body{padding:0}.licence-paper{border:1px solid #aaa;max-width:none}.licence-paper:after{color:#dba72d35}}
 </style>
 <style id="koroma-premium-dashboard-2026">
-:root{
-  --klt-accent:#1262bd;
-  --klt-glow:rgba(18,98,189,.14);
-  --klt-ease:cubic-bezier(.2,.75,.25,1);
-}
-html{scroll-behavior:smooth}
-.card,.panel,.stat,.stat-card,.kpi,.content-panel,.hero,.pagehead,.page-head,.login-card{
-  border-radius:18px!important;
-  transition:transform .24s var(--klt-ease),box-shadow .24s var(--klt-ease),border-color .24s var(--klt-ease);
-  box-shadow:0 12px 34px rgba(15,35,60,.075),inset 0 1px 0 rgba(255,255,255,.42);
-}
-.stat,.stat-card,.kpi{
-  position:relative;
-  overflow:hidden;
-  isolation:isolate;
-  animation:kltDashboardRise .55s var(--klt-ease) both;
-}
-.stat::after,.stat-card::after,.kpi::after{
-  content:"";
-  position:absolute;
-  width:155px;height:155px;
-  right:-62px;bottom:-88px;
-  border-radius:50%;
-  background:radial-gradient(circle,var(--klt-glow),transparent 70%);
-  pointer-events:none;
-  z-index:-1;
-}
-.card:hover,.panel:hover,.stat:hover,.stat-card:hover,.kpi:hover,.content-panel:hover{
-  transform:translateY(-2px);
-  box-shadow:0 18px 42px rgba(15,35,60,.11),inset 0 1px 0 rgba(255,255,255,.5);
-}
-button,.btn,.navbtn,.tab,nav a,nav button{
-  transition:transform .18s var(--klt-ease),filter .18s ease,box-shadow .18s ease,background-color .18s ease;
-}
-button:hover:not(:disabled),.btn:hover:not(:disabled){
-  filter:brightness(1.045);
-}
-button:active:not(:disabled),.btn:active:not(:disabled){
-  transform:translateY(1px) scale(.99);
-}
-input,select,textarea{
-  border-radius:11px;
-  transition:border-color .18s ease,box-shadow .18s ease;
-}
-input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{
-  outline:3px solid var(--klt-glow);
-  outline-offset:2px;
-}
-table tbody tr{transition:background-color .16s ease}
-table tbody tr:hover{background:var(--klt-glow)}
-@keyframes kltDashboardRise{
-  from{opacity:0;transform:translateY(9px)}
-  to{opacity:1;transform:translateY(0)}
-}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-}
+:root{--klt-accent:#2479c6;--klt-deep:#082e58;--klt-glow:rgba(36,121,198,.21)}
+html,body{min-height:100%;background:#edf3f9!important}
+body{background:radial-gradient(ellipse at 92% 0%,rgba(36,121,198,.17),transparent 34%),linear-gradient(135deg,#f5f8fc,#e8f0f8)!important}
+.demo-banner{background:linear-gradient(100deg,#fff2cd,#fff9e9)!important;border:0!important;border-bottom:1px solid #efd89c!important;padding:10px 18px!important}
+.topbar{background:linear-gradient(115deg,#061f3f,#0b4b83 72%,#1475b4)!important;box-shadow:0 18px 40px #082f5940!important;padding:17px clamp(14px,3vw,30px)!important}
+.topbar .brand h1{font-size:clamp(18px,3vw,25px)!important;letter-spacing:-.03em}
+.layout{gap:0!important}
+#sidebar{background:linear-gradient(180deg,#082747,#071b31 78%,#0b2948)!important;box-shadow:10px 0 28px #0827471c!important}
+.navbtn{border-radius:12px!important;margin:3px 7px!important}
+.navbtn.active{background:linear-gradient(100deg,#175d98,#277fc3)!important;box-shadow:0 8px 19px #0a5a993d!important;color:#fff!important}
+.main{background:transparent!important;padding:clamp(16px,3vw,32px)!important}
+.pagehead{border-radius:24px!important;background:linear-gradient(115deg,#082c50,#0d5d98 72%,#167eb9)!important;color:#fff!important;padding:clamp(20px,4vw,34px)!important;box-shadow:0 18px 42px #0b4d8333!important;margin-bottom:18px!important}
+.pagehead h2{color:#fff!important;font-size:clamp(24px,3.5vw,32px)!important;letter-spacing:-.04em}
+.pagehead p{color:#d5e9fb!important}
+.pagehead .date{background:#ffffff18!important;border:1px solid #ffffff30!important;color:#fff!important;border-radius:12px!important;padding:9px 12px}
+.stats{gap:14px!important;grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.stat{background:linear-gradient(145deg,#fff,#f4f9ff)!important;border:1px solid #d9e6f2!important;border-radius:19px!important;padding:18px!important;box-shadow:0 14px 30px #123f6811!important;position:relative;overflow:hidden}
+.stat:after{content:"";position:absolute;right:-40px;bottom:-65px;width:155px;height:155px;border-radius:50%;background:radial-gradient(circle,var(--klt-glow),transparent 70%)}
+.stat-value{font-size:clamp(27px,3.7vw,37px)!important;font-weight:850!important;color:#0b4d86!important}
+.panels{gap:15px!important}
+.panel{border-radius:20px!important;border:1px solid #dbe7f1!important;background:#fff!important;box-shadow:0 14px 34px #143e6712!important}
+.action{border-radius:15px!important;background:linear-gradient(145deg,#fff,#f2f8ff)!important;border:1px solid #d8e7f5!important;box-shadow:0 8px 20px #0e538a10!important}
+.action:hover{transform:translateY(-3px);box-shadow:0 14px 26px #0e538a20!important}
+@media(max-width:750px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))!important}.main{padding:13px!important}.pagehead{padding:19px!important}}
+
 </style>
 
+<meta name="klt-dashboard-version" content="2026-11-22-premium-v2">
 </head>
 <body>
 <div class="demo-banner">⚠ <span>This system contains <strong>DEMONSTRATION DATA</strong> for testing and presentation only. It is not an official Ministry register.</span><b>DEMO DATA</b></div>
